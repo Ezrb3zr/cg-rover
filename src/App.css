@@ -25,11 +25,6 @@
   color: #61dafb;
 }
 
-.btn {
-  margin-top: 5px;
-}
-
-
 .roverList {
   display: flex;
   flex-direction: column;
@@ -40,4 +35,8 @@
 
 .roverListItem {
   list-style-type: none;
+}
+
+.btn btn-primary{
+  margin: 5px;
 }

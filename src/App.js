@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './cg_logo.png';
+import logo from './cgbanner.png';
 import './App.css';
 import ReactFileReader from 'react-file-reader';
 import * as _ from 'lodash';
@@ -84,10 +84,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className='header'> Camp Gladiator Rover v1</h1>
+        <h1 className='header'> Rover v1 </h1>
         <h4 className='header'> Codename: Red Rover </h4>
         <ReactFileReader handleFiles={handleFiles} fileTypes={'.csv'}>
-          <button className='btn'>Upload Rover File</button>
+          <button className='btn btn-primary' type="button">Upload Rover File</button>
         </ReactFileReader>
         <ul className='roverList'>
           {_.map(fileOutput, (position, index) => (fileOutput) && (
