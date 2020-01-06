@@ -42,8 +42,8 @@ function App() {
         y: parseInt(initPosition[1], 10)
       };
       let directionIndex = CARDINAL_DIRECTIONS.findIndex((direction) => direction.letter === initPosition[2]);
-      roverParamGroup[1].split('').map((inputKey) => {
-        if(position.x > mapSize.x || position.x < 0 || position.y > mapSize.y || position.y < 0) { return null; }
+      roverParamGroup[1].split('').forEach((inputKey) => {
+        if(position.x > mapSize.x || position.x < 0 || position.y > mapSize.y || position.y < 0) { return; }
         switch(inputKey) {
           case 'M':
             const newX = position.x + CARDINAL_DIRECTIONS[directionIndex].x;
@@ -70,11 +70,10 @@ function App() {
           default: 
               break;
         }
-        return null;
       });
       const resultingCoordinate = '(' + position.x.toString() + ' ' + position.y.toString() + ' ' + CARDINAL_DIRECTIONS[directionIndex].letter + ')';
       if(position.x > mapSize.x || position.x < 0 || position.y > mapSize.y || position.y < 0) {
-        return  resultingCoordinate +  'Oh no! The Rover fell off the edge of the plateau at some point! 😦';
+        return  resultingCoordinate +  ' Oh no! The Rover fell off the edge of the plateau at some point! 😦';
       }
       return resultingCoordinate;
     }
