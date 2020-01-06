@@ -90,10 +90,9 @@ function App() {
           <button className='btn'>Upload Rover File</button>
         </ReactFileReader>
         <ul className='roverList'>
-        {_.map(fileOutput, (position, index) => (fileOutput) && (
-          <li key={index} className='roverListItem'> Rover {index + 1}: {position}</li>
-        )
-        )}
+          {_.map(fileOutput, (position, index) => (fileOutput) && (
+            <li key={index} className='roverListItem'> Rover {index + 1}: {position} </li>
+          ))}
         </ul>
       </header>
     </div>
