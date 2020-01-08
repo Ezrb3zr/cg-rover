@@ -26,6 +26,8 @@ Test Input:
     LMLMLMLMM
     3 3 E
     MMRMMRMRRM
+    1 1 N
+    MMMMMMMMMM
 
 ## Output
 You should get a list of resulting Coordinates, wherever each rover lands.
