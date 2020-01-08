@@ -19,7 +19,8 @@ The position is made up of two integers and a letter separated by spaces, corres
 
 NOTE: IT IS IMPORTANT THAT THE MAP SIZE AND THE STARTING POSITION HAVE THEIR VALUES SEPARATED BY A SPACE. IT IS EQUALLY IMPORTANT THAT THE MOVEMENT INPUT HAS NO DELIMITERS BETWEEN KEYS.
 
-    Test Input:
+Test Input:
+    
     5 5
     1 2 N
     LMLMLMLMM
@@ -30,6 +31,12 @@ NOTE: IT IS IMPORTANT THAT THE MAP SIZE AND THE STARTING POSITION HAVE THEIR VAL
 You should get a list of resulting Coordinates, wherever each rover lands.
 
 HOWEVER it should be stated that when a rover goes outside the map, my code returns the last known position at the time of the crash. So if there are 10 movements for a rover, and on the 5th move it crashes, you will see the resulting coordinate at the time of the crash. The rover will not move after the 5th move. For the sake of simplicity, I do not keep track of which move it was that cause the crash.
+
+Example Output:
+
+    (1 2 N)
+    (5 1 E)
+    (1 6 N) Oh no! The Rover fell off the edge of the plateau at some point! 😦
 
 ## Available Scripts
 
