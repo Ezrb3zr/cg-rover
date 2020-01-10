@@ -46,29 +46,27 @@ function App() {
         if(position.x > mapSize.x || position.x < 0 || position.y > mapSize.y || position.y < 0) { return; }
         switch(inputKey) {
           case 'M':
-            const newX = position.x + CARDINAL_DIRECTIONS[directionIndex].x;
-            const newY = position.y + CARDINAL_DIRECTIONS[directionIndex].y;
             position = {
-              x: newX,
-              y: newY
+              x: position.x + CARDINAL_DIRECTIONS[directionIndex].x,
+              y: position.y + CARDINAL_DIRECTIONS[directionIndex].y
             }
             break;
           case 'L':
-              if(directionIndex + 1 > (CARDINAL_DIRECTIONS.length - 1)) {
-                directionIndex = 0;
-              } else {
-                directionIndex = directionIndex + 1;
-              }
-              break;
+            if(directionIndex + 1 > (CARDINAL_DIRECTIONS.length - 1)) {
+              directionIndex = 0;
+            } else {
+              directionIndex = directionIndex + 1;
+            }
+            break;
           case 'R':
-              if(directionIndex - 1 < 0) {
-                directionIndex = CARDINAL_DIRECTIONS.length - 1;
-              } else {
-                directionIndex = directionIndex - 1;
-              }
-              break;
+            if(directionIndex - 1 < 0) {
+              directionIndex = CARDINAL_DIRECTIONS.length - 1;
+            } else {
+              directionIndex = directionIndex - 1;
+            }
+            break;
           default: 
-              break;
+            break;
         }
       });
       const resultingCoordinate = '(' + position.x.toString() + ' ' + position.y.toString() + ' ' + CARDINAL_DIRECTIONS[directionIndex].letter + ')';
